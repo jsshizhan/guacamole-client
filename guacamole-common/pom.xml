@@ -26,9 +26,24 @@
     <groupId>org.apache.guacamole</groupId>
     <artifactId>guacamole-common</artifactId>
     <packaging>jar</packaging>
-    <version>1.5.2</version>
+    <version>1.5.2-ym</version>
     <name>guacamole-common</name>
     <url>http://guacamole.apache.org/</url>
+
+    <repositories>
+        <repository>
+            <id>ali</id>
+            <name>ali</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>yunmotec</id>
+            <url>http://nexus.yunmotec.com:32055/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <parent>
         <groupId>org.apache.guacamole</groupId>
@@ -77,17 +92,17 @@
 
         <!-- Java servlet API -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- JSR 356 WebSocket API -->
+
         <dependency>
-            <groupId>javax.websocket</groupId>
-            <artifactId>javax.websocket-api</artifactId>
-            <version>1.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>3.1.1</version>
             <scope>provided</scope>
         </dependency>
 

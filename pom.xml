@@ -30,6 +30,14 @@
     <name>guacamole-client</name>
     <url>http://guacamole.apache.org/</url>
 
+    <repositories>
+        <repository>
+            <id>ali</id>
+            <name>ali</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
     <properties>
 
         <!-- Core properties -->
